@@ -1,3 +1,0 @@
-git remote add origin https://github.com/lexy898/YHotKey_repositiry.git
-git push -u origin master
-git push -u origin master
