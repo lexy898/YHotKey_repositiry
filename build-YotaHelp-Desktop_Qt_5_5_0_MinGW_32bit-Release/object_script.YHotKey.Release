@@ -1,0 +1,12 @@
+INPUT(
+./release\main.o
+./release\mainwindow.o
+./release\statisticdialog.o
+./release\dialog_hi_bye.o
+./release\for_sqlite.o
+./release\qrc_application.o
+./release\moc_mainwindow.o
+./release\moc_statisticdialog.o
+./release\moc_dialog_hi_bye.o
+./release\moc_for_sqlite.o
+);

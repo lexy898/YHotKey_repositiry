@@ -1,0 +1,9 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+    <file>ico/add.png</file>
+    <file>ico/cancel.png</file>
+    <file>ico/constructor.png</file>
+    <file>ico/minus.png</file>
+    <file>ico/save.png</file>
+</qresource>
+</RCC>
