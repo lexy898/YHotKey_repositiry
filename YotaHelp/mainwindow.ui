@@ -452,7 +452,7 @@
      </rect>
     </property>
     <property name="title">
-     <string>Реже используемые шаблоны</string>
+     <string>Другие шаблоны</string>
     </property>
     <widget class="QPushButton" name="few">
      <property name="geometry">
