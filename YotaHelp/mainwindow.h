@@ -97,21 +97,9 @@ private slots:
 
     void on_constructor_clicked();
 
-    void on_b1_clicked();
+    void any_template_clicked();
 
-    void on_b2_clicked();
-
-    void on_b3_clicked();
-
-    void on_b4_clicked();
-
-    void on_b5_clicked();
-
-    void on_b6_clicked();
-
-    void on_b7_clicked();
-
-    void on_b8_clicked();
+    void text_out(QString button_name);
 
 private:
     Ui::MainWindow *ui;
@@ -120,7 +108,6 @@ private:
     QPointer<StatisticDialog> DialogStatistic;
     QString selected_button; //выбранная кнопка
     bool constructor_Mode=false; //режим конструктора
-    void text_out(QString button_name);
     void for_different(QString param);
     void but_off();
     void set_Icons_And_Tooltips();

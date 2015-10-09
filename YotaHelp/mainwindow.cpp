@@ -14,6 +14,15 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->statusBar->addPermanentWidget(ui->lblResult);
     ui->hello_Edit_2->setVisible(0);
     set_Icons_And_Tooltips();
+    connect(ui->b1,SIGNAL(clicked(bool)),this,SLOT(any_template_clicked()));
+    connect(ui->b2,SIGNAL(clicked(bool)),this,SLOT(any_template_clicked()));
+    connect(ui->b3,SIGNAL(clicked(bool)),this,SLOT(any_template_clicked()));
+    connect(ui->b4,SIGNAL(clicked(bool)),this,SLOT(any_template_clicked()));
+    connect(ui->b5,SIGNAL(clicked(bool)),this,SLOT(any_template_clicked()));
+    connect(ui->b6,SIGNAL(clicked(bool)),this,SLOT(any_template_clicked()));
+    connect(ui->b7,SIGNAL(clicked(bool)),this,SLOT(any_template_clicked()));
+    connect(ui->b8,SIGNAL(clicked(bool)),this,SLOT(any_template_clicked()));
+
 
     if (DB.connect_to_DB("db.sqlite",true))
     {
@@ -144,93 +153,16 @@ void MainWindow::on_speedtest_clicked()
     for_different(ui->speedtest->text());
 }
 
-
-void MainWindow::on_b1_clicked()
+void MainWindow::any_template_clicked()
 {
+    QPushButton *obj = (QPushButton*) sender();
     if (constructor_Mode)
     {
-      selected_button=ui->b1->objectName();
+      selected_button=obj->objectName();
       show_Constructor_Dialog();
       return;
     }
-    text_out(ui->b1->text());
-}
-
-void MainWindow::on_b2_clicked()
-{
-    if (constructor_Mode)
-    {
-      selected_button=ui->b2->objectName();
-      show_Constructor_Dialog();
-      return;
-    }
-    text_out(ui->b2->text());
-}
-
-void MainWindow::on_b3_clicked()
-{
-    if (constructor_Mode)
-    {
-      selected_button=ui->b3->objectName();
-      show_Constructor_Dialog();
-      return;
-    }
-    text_out(ui->b3->text());
-}
-
-void MainWindow::on_b4_clicked()
-{
-    if (constructor_Mode)
-    {
-      selected_button=ui->b4->objectName();
-      show_Constructor_Dialog();
-      return;
-    }
-    text_out(ui->b4->text());
-}
-
-void MainWindow::on_b5_clicked()
-{
-    if (constructor_Mode)
-    {
-      selected_button=ui->b5->objectName();
-      show_Constructor_Dialog();
-      return;
-    }
-    text_out(ui->b5->text());
-}
-
-void MainWindow::on_b6_clicked()
-{
-    if (constructor_Mode)
-    {
-      selected_button=ui->b6->objectName();
-      show_Constructor_Dialog();
-      return;
-    }
-    text_out(ui->b6->text());
-}
-
-void MainWindow::on_b7_clicked()
-{
-    if (constructor_Mode)
-    {
-      selected_button=ui->b7->objectName();
-      show_Constructor_Dialog();
-      return;
-    }
-    text_out(ui->b7->text());
-}
-
-void MainWindow::on_b8_clicked()
-{
-    if (constructor_Mode)
-    {
-      selected_button=ui->b8->objectName();
-      show_Constructor_Dialog();
-      return;
-    }
-    text_out(ui->b8->text());
+    text_out(obj->text());
 }
 
 void MainWindow::on_Edit_clicked()
