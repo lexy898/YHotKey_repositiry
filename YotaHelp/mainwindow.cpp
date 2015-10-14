@@ -22,7 +22,10 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->b6,SIGNAL(clicked(bool)),this,SLOT(any_template_clicked()));
     connect(ui->b7,SIGNAL(clicked(bool)),this,SLOT(any_template_clicked()));
     connect(ui->b8,SIGNAL(clicked(bool)),this,SLOT(any_template_clicked()));
-
+    connect(ui->settings_internet,SIGNAL(clicked(bool)),this,SLOT(for_different()));
+    connect(ui->settings_mms,SIGNAL(clicked(bool)),this,SLOT(for_different()));
+    connect(ui->activation,SIGNAL(clicked(bool)),this,SLOT(for_different()));
+    connect(ui->speedtest,SIGNAL(clicked(bool)),this,SLOT(for_different()));
 
     if (DB.connect_to_DB("db.sqlite",true))
     {
@@ -82,8 +85,10 @@ void MainWindow::text_out(QString button_name)
     }
 }
 
-void MainWindow::for_different(QString param)
+void MainWindow::for_different()
 {
+    QPushButton *obj = (QPushButton*) sender();
+    QString param=obj->text();
     if (ui->Android->isChecked()){
         param+="_"+ui->Android->text();
         text_out(param);
@@ -131,26 +136,6 @@ void MainWindow::activation_Form(bool flag)
     ui->textEdit->setEnabled(flag);
     ui->statistic->setEnabled(flag);
     work_with_hello_line();
-}
-
-void MainWindow::on_settings_internet_clicked()
-{
-    for_different(ui->settings_internet->text());
-}
-
-void MainWindow::on_settings_mms_clicked()
-{
-    for_different(ui->settings_mms->text());
-}
-
-void MainWindow::on_activation_clicked()
-{
-    for_different(ui->activation->text());
-}
-
-void MainWindow::on_speedtest_clicked()
-{
-    for_different(ui->speedtest->text());
 }
 
 void MainWindow::any_template_clicked()

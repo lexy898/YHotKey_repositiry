@@ -39,14 +39,6 @@ signals:
 private slots:
     void on_hello_clicked();
 
-    void on_settings_internet_clicked();
-
-    void on_settings_mms_clicked();
-
-    void on_activation_clicked();
-
-    void on_speedtest_clicked();
-
     void on_Edit_clicked();
 
     void on_Save_clicked();
@@ -97,9 +89,11 @@ private slots:
 
     void on_constructor_clicked();
 
-    void any_template_clicked();
+    void any_template_clicked(); //Нажатие одной из кнопок шаблона
 
     void text_out(QString button_name);
+
+    void for_different();
 
 private:
     Ui::MainWindow *ui;
@@ -108,7 +102,6 @@ private:
     QPointer<StatisticDialog> DialogStatistic;
     QString selected_button; //выбранная кнопка
     bool constructor_Mode=false; //режим конструктора
-    void for_different(QString param);
     void but_off();
     void set_Icons_And_Tooltips();
     void activation_Form(bool flag); //вкл.откл элементов формы в режиме конструктора
