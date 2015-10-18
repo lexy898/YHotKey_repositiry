@@ -22,13 +22,13 @@ public:
 
 private slots:
 
-    void on_pushButton_clicked();
-
     void my_slot();
 
-    void on_pushButton_2_clicked();
-
     void on_DeletStatistic_clicked();
+
+    void show_statistic();
+
+    void show_statistic_2();
 
 private:
     Ui::StatisticDialog *ui;

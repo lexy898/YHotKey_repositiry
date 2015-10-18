@@ -20,7 +20,7 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_StatisticDialog_t {
     QByteArrayData data[6];
-    char stringdata0[97];
+    char stringdata0[83];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -30,16 +30,16 @@ struct qt_meta_stringdata_StatisticDialog_t {
 static const qt_meta_stringdata_StatisticDialog_t qt_meta_stringdata_StatisticDialog = {
     {
 QT_MOC_LITERAL(0, 0, 15), // "StatisticDialog"
-QT_MOC_LITERAL(1, 16, 21), // "on_pushButton_clicked"
-QT_MOC_LITERAL(2, 38, 0), // ""
-QT_MOC_LITERAL(3, 39, 7), // "my_slot"
-QT_MOC_LITERAL(4, 47, 23), // "on_pushButton_2_clicked"
-QT_MOC_LITERAL(5, 71, 25) // "on_DeletStatistic_clicked"
+QT_MOC_LITERAL(1, 16, 7), // "my_slot"
+QT_MOC_LITERAL(2, 24, 0), // ""
+QT_MOC_LITERAL(3, 25, 25), // "on_DeletStatistic_clicked"
+QT_MOC_LITERAL(4, 51, 14), // "show_statistic"
+QT_MOC_LITERAL(5, 66, 16) // "show_statistic_2"
 
     },
-    "StatisticDialog\0on_pushButton_clicked\0"
-    "\0my_slot\0on_pushButton_2_clicked\0"
-    "on_DeletStatistic_clicked"
+    "StatisticDialog\0my_slot\0\0"
+    "on_DeletStatistic_clicked\0show_statistic\0"
+    "show_statistic_2"
 };
 #undef QT_MOC_LITERAL
 
@@ -77,10 +77,10 @@ void StatisticDialog::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         StatisticDialog *_t = static_cast<StatisticDialog *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->on_pushButton_clicked(); break;
-        case 1: _t->my_slot(); break;
-        case 2: _t->on_pushButton_2_clicked(); break;
-        case 3: _t->on_DeletStatistic_clicked(); break;
+        case 0: _t->my_slot(); break;
+        case 1: _t->on_DeletStatistic_clicked(); break;
+        case 2: _t->show_statistic(); break;
+        case 3: _t->show_statistic_2(); break;
         default: ;
         }
     }

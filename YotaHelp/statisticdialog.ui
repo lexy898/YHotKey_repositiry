@@ -102,7 +102,7 @@
          </item>
         </layout>
        </widget>
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QPushButton" name="GetStatisticBtn">
         <property name="geometry">
          <rect>
           <x>244</x>
@@ -146,9 +146,6 @@
        <property name="rowCount">
         <number>0</number>
        </property>
-       <attribute name="horizontalHeaderVisible">
-        <bool>false</bool>
-       </attribute>
        <attribute name="horizontalHeaderCascadingSectionResizes">
         <bool>true</bool>
        </attribute>
@@ -239,9 +236,6 @@
        <property name="rowCount">
         <number>0</number>
        </property>
-       <attribute name="horizontalHeaderVisible">
-        <bool>false</bool>
-       </attribute>
        <attribute name="horizontalHeaderCascadingSectionResizes">
         <bool>true</bool>
        </attribute>
@@ -268,6 +262,9 @@
        </attribute>
        <attribute name="verticalHeaderMinimumSectionSize">
         <number>10</number>
+       </attribute>
+       <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+        <bool>false</bool>
        </attribute>
        <column>
         <property name="text">
@@ -305,7 +302,7 @@
        <property name="title">
         <string>Выбрать</string>
        </property>
-       <widget class="QPushButton" name="pushButton_2">
+       <widget class="QPushButton" name="GetStatisticBtn_2">
         <property name="geometry">
          <rect>
           <x>244</x>

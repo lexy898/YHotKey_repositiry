@@ -40,7 +40,7 @@ public:
     QLabel *label;
     QLabel *label_2;
     QDateEdit *dateEdit_2;
-    QPushButton *pushButton;
+    QPushButton *GetStatisticBtn;
     QLabel *label_statistic;
     QTableWidget *tableWidget;
     QPushButton *DeletStatistic;
@@ -48,7 +48,7 @@ public:
     QTableWidget *tableWidget_2;
     QLabel *label_statistic_2;
     QGroupBox *groupBox_2;
-    QPushButton *pushButton_2;
+    QPushButton *GetStatisticBtn_2;
     QWidget *horizontalLayoutWidget;
     QHBoxLayout *horizontalLayout;
     QLabel *label_3;
@@ -109,9 +109,9 @@ public:
 
         gridLayout_2->addWidget(dateEdit_2, 1, 1, 1, 1);
 
-        pushButton = new QPushButton(groupBox);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(244, 20, 51, 51));
+        GetStatisticBtn = new QPushButton(groupBox);
+        GetStatisticBtn->setObjectName(QStringLiteral("GetStatisticBtn"));
+        GetStatisticBtn->setGeometry(QRect(244, 20, 51, 51));
         label_statistic = new QLabel(tab);
         label_statistic->setObjectName(QStringLiteral("label_statistic"));
         label_statistic->setGeometry(QRect(10, 90, 301, 16));
@@ -128,7 +128,6 @@ public:
         font1.setPointSize(8);
         tableWidget->setFont(font1);
         tableWidget->setRowCount(0);
-        tableWidget->horizontalHeader()->setVisible(false);
         tableWidget->horizontalHeader()->setCascadingSectionResizes(true);
         tableWidget->horizontalHeader()->setDefaultSectionSize(150);
         tableWidget->horizontalHeader()->setHighlightSections(true);
@@ -160,7 +159,6 @@ public:
         tableWidget_2->setGeometry(QRect(10, 110, 302, 231));
         tableWidget_2->setFont(font1);
         tableWidget_2->setRowCount(0);
-        tableWidget_2->horizontalHeader()->setVisible(false);
         tableWidget_2->horizontalHeader()->setCascadingSectionResizes(true);
         tableWidget_2->horizontalHeader()->setDefaultSectionSize(150);
         tableWidget_2->horizontalHeader()->setHighlightSections(true);
@@ -170,15 +168,16 @@ public:
         tableWidget_2->verticalHeader()->setCascadingSectionResizes(true);
         tableWidget_2->verticalHeader()->setDefaultSectionSize(17);
         tableWidget_2->verticalHeader()->setMinimumSectionSize(10);
+        tableWidget_2->verticalHeader()->setProperty("showSortIndicator", QVariant(false));
         label_statistic_2 = new QLabel(tab_2);
         label_statistic_2->setObjectName(QStringLiteral("label_statistic_2"));
         label_statistic_2->setGeometry(QRect(10, 90, 301, 16));
         groupBox_2 = new QGroupBox(tab_2);
         groupBox_2->setObjectName(QStringLiteral("groupBox_2"));
         groupBox_2->setGeometry(QRect(10, 10, 301, 81));
-        pushButton_2 = new QPushButton(groupBox_2);
-        pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
-        pushButton_2->setGeometry(QRect(244, 20, 51, 51));
+        GetStatisticBtn_2 = new QPushButton(groupBox_2);
+        GetStatisticBtn_2->setObjectName(QStringLiteral("GetStatisticBtn_2"));
+        GetStatisticBtn_2->setGeometry(QRect(244, 20, 51, 51));
         horizontalLayoutWidget = new QWidget(groupBox_2);
         horizontalLayoutWidget->setObjectName(QStringLiteral("horizontalLayoutWidget"));
         horizontalLayoutWidget->setGeometry(QRect(10, 20, 231, 51));
@@ -218,7 +217,7 @@ public:
         groupBox->setTitle(QApplication::translate("StatisticDialog", "\320\222\321\213\320\261\321\200\320\260\321\202\321\214", 0));
         label->setText(QApplication::translate("StatisticDialog", "\320\222\321\213\320\262\320\265\321\201\321\202\320\270 \321\201\321\202\320\260\321\202\320\270\321\201\321\202\320\270\320\272\321\203 \321\201", 0));
         label_2->setText(QApplication::translate("StatisticDialog", "\320\277\320\276", 0));
-        pushButton->setText(QApplication::translate("StatisticDialog", "Ok", 0));
+        GetStatisticBtn->setText(QApplication::translate("StatisticDialog", "Ok", 0));
         label_statistic->setText(QApplication::translate("StatisticDialog", "<font color=blue><b>\320\241\321\202\320\260\321\202\320\270\321\201\321\202\320\270\320\272\320\260..</b></font>", 0));
         QTableWidgetItem *___qtablewidgetitem = tableWidget->horizontalHeaderItem(0);
         ___qtablewidgetitem->setText(QApplication::translate("StatisticDialog", "\320\227\320\260\320\277\321\200\320\276\321\201", 0));
@@ -232,7 +231,7 @@ public:
         ___qtablewidgetitem3->setText(QApplication::translate("StatisticDialog", "\320\232\320\276\320\273\320\270\321\207\320\265\321\201\321\202\320\262\320\276", 0));
         label_statistic_2->setText(QApplication::translate("StatisticDialog", "<font color=blue><b>\320\241\321\202\320\260\321\202\320\270\321\201\321\202\320\270\320\272\320\260..</b></font>", 0));
         groupBox_2->setTitle(QApplication::translate("StatisticDialog", "\320\222\321\213\320\261\321\200\320\260\321\202\321\214", 0));
-        pushButton_2->setText(QApplication::translate("StatisticDialog", "Ok", 0));
+        GetStatisticBtn_2->setText(QApplication::translate("StatisticDialog", "Ok", 0));
         label_3->setText(QApplication::translate("StatisticDialog", "\320\222\321\213\320\262\320\265\321\201\321\202\320\270 \321\201\321\202\320\260\321\202\320\270\321\201\321\202\320\270\320\272\321\203 \320\267\320\260", 0));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("StatisticDialog", "\320\224\320\265\320\275\321\214", 0));
     } // retranslateUi
